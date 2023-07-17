@@ -1,0 +1,122 @@
+:root {
+  --dark: #374151;
+  --darker: #1f2937;
+  --darkest: #111827;
+  --gray: #6b7280;
+  --light: #eee;
+  --pink: #ec4899;
+  --purple: #8b5cf6;
+  --snow: rgb(143, 131, 131);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--snow);
+  color: white;
+}
+
+header {
+  padding: 20px;
+}
+
+h3 {
+  text-align: center;
+  padding-bottom: 10px;
+  font-weight: 300;
+  font-family: sans-serif;
+}
+
+#to-do-form {
+  display: flex;
+  gap: 20px;
+}
+
+input,
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#to-do-input {
+  background-color: #111827;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: var(--light);
+  font-size: 15px;
+}
+
+#to-do-input::placeholder {
+  color: var(--gray);
+}
+
+#to-do-submit {
+  color: rgb(160, 46, 46);
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.list {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  background-color: var(--darkest);
+  padding: 10px 20px;
+  margin-right: 25px;
+  border-radius: 8px;
+  min-width: 30vw;
+  gap: 10px;
+}
+
+.lists {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.text {
+  color: white;
+  flex-grow: 2;
+}
+.input_done {
+  color: rgb(64, 187, 64);
+}
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.trash {
+  cursor: pointer;
+  color: red;
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 0;
+}
+
+.done {
+  cursor: pointer;
+  color: var(--grey);
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 0;
+}
+
+.clear {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+}
